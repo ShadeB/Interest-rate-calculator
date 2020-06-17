@@ -12,7 +12,7 @@ Piggy vest interest rate calculator.
       <li><code>git checkout -b branch-name</code></li> 
       <li><code>git add file-name</code></li>
       <li><code>git commit -m "Your commit message in quotes"</code></li>
-      <li><code>git push origin file-name</code></li>
+      <li><code>git push origin branch-name</code></li>
     </ul></li> <br>
   <li>Create a pull request straight to this repository <br> NB: In your forked repo, don't merge your newly created branch into master i.e you will be creating a PR with your new branch (which contains your changes) ahead of your master branch</li>
 </ol>
