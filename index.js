@@ -12,8 +12,8 @@ function simpleInterest() {
   var termOfLoan = parseFloat(document.getElementById("termSimple").value);
   var simpleInt = principal * interestRate * termOfLoan;
   var amount = (principal + simpleInt).toFixed(2);
-  document.getElementById("siOutput-01").innerHTML = "Interest: $" + simpleInt.toFixed(2);
-  document.getElementById("siOutput-02").innerHTML = "Total + interest: $" + amount;
+  document.getElementById("siOutput-01").innerHTML = "Interest: #" + simpleInt.toFixed(2);
+  document.getElementById("siOutput-02").innerHTML = "Total + interest: #" + amount;
 }
 
 function compoundInterest() {
