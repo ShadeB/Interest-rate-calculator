@@ -15,16 +15,65 @@ body {
 	font-size: 2.6rem;
 }
 
+ul {
+	list-style-type: none;
+}
 
+header {
+	background-color: #083e9e;
+	border-radius: 0px 70px 70px 0px;
+	display: none;
+}
+
+nav {
+	border-radius: 0px 34px 34px 0px;
+	background-color: #083e9e;
+}
+
+.navbar {
+	position: fixed;
+	bottom: 0;
+	top: 0;
+}
+
+li {
+	padding: 0 4rem;
+}
+
+li {
+	padding: 2rem 4rem;
+}
+
+li > a > img {
+	max-width: 2.5rem;
+}
+
+.logo__link {
+	margin-bottom: 4rem;
+}
+
+.logo {
+	max-width: 7.8rem;
+	position: absolute;
+	top: 6%;
+	left: 6%;
+}
+
+.logout {
+	font-size: 2rem;
+	padding: 2rem;
+	color: white;
+	margin: auto;
+}
 
 /* ====================
 Result-Card Section
 ====================== */
 .result {
 	font-family: 'Poppins', sans-serif;
-	max-width: 700px;
-	max-height: 530px;
-	background-color:#083E9E;
+	max-width: 35rem;
+	background-color: #083e9e;
+	margin: auto;
 	border-radius: 30px;
 	padding: 3%;
 }
@@ -44,7 +93,7 @@ Result-Card Section
 .result .statement {
 	font-size: 2.4rem;
 	line-height: 3.6rem;
-	width:80%;
+	width: 80%;
 }
 
 .result .breakdown {
@@ -54,13 +103,12 @@ Result-Card Section
 .return .title,
 .savings .title {
 	line-height: 4.5rem;
-	font-size: 3.0rem;
+	font-size: 3rem;
 	font-weight: 500;
 }
 
 .return .amount,
 .savings .amount {
 	font-weight: 600;
-	font-size: 3.0rem;
+	font-size: 3rem;
 }
-
