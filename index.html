@@ -70,7 +70,7 @@
 							<form id="calculate-form">
 							<h1 class="heading heading__main">Calculator</h1>
 							<h2 class="heading">How much interest can I make</h2>
-							<form>
+							<form id="calculate-form">
 
 								<label class="text-muted" for="Frequency">Frequency</label>
 								<select id="frequency_select" class="form-control mb-4">
@@ -110,7 +110,7 @@
 							>
 								<div class="balance mb-5">
 									<span class="title d-inline-block mb-4">Total Balance</span>
-									<span id="total-balance" class="amount">50,000</span>
+									<span id="total-balance" class="amount"></span>
 								</div>
 								<p id="statement" class="statement text-center mb-5">
 									saving 
@@ -137,47 +137,17 @@
 			</section>
 		</main>
 
-		<script src="./SI.js"></script>
+		
 		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="SI.js"></script>
 		<script type="text/javascript">
 		$('#calculate-form').on('submit', function(e){
 
-				e.preventDefault();
+			simpleInterest();
+			event.preventDefault();			
 
-				var frequency = $('#frequency_select').val(); 
-				var amount = $('#amount').val();
-				var years = $('#years').val();
-
-				function calculator(fr, am, yr)
-				{
-					calculated = (am * (yr + fr));
-					return calculated
-				}
-
-				// return display
-				results = calculator(frequency, amount, years);
-
-				$('#total-balance').text(results);
-				$('#statement-get').text(amount);
-				$('#statement-month').text(years + ' years');
-
-
-				// var dataString = 'freq='+frequency+ '&amount='+ amount+ '&years='+ years;
-				// $.ajax({
-
-				// 	type: "post",
-				// 	url: 'calculate.php',
-				// 	data: dataString,
-				// 	success: function(html){
-				// 		window.close();
-				// 		window.opener.location.href = "";
-				// 	}, error: function(){
-				// 		// alert('An error occured, please try again');
-				// 		window.location = "others.html";
-				// 		// window.close();
-				// 	}
-				// });
 		});
 		</script>
+
 	</body>
 </html>
