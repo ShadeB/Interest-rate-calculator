@@ -18,6 +18,9 @@ function simpleInterest() {
   // document.getElementById("siOutput-01").innerHTML = "Interest: $" + simpleInt.toFixed(2);
   
   document.getElementById("total-balance").innerHTML =  amount;
+  document.getElementById("statement-month").innerHTML =  termOfLoan + " years";
+  document.getElementById("statement-get").innerHTML =  principal;
+  
   
 }
 
