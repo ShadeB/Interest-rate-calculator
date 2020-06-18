@@ -58,7 +58,7 @@ li {
 }
 
 li {
-	padding: 2rem 4rem;
+	padding: 0.5rem 4rem;
 }
 
 li > a > img {
@@ -92,6 +92,11 @@ li > a > img {
 	font-weight: 700;
 }
 
+.form-control {
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
 .btn {
 	padding: 1.5rem 0;
 	width: 100%;
@@ -99,6 +104,11 @@ li > a > img {
 	background-color: var(--primary-blue);
 	color: var(--white);
 	font-size: 2rem;
+}
+
+.btn-primary {
+	outline: none;
+	border: 0;
 }
 
 /* ====================
