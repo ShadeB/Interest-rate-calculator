@@ -16,7 +16,7 @@
 			crossorigin="anonymous"
 		/>
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="/styles/style.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 		<!-- Font -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
@@ -27,30 +27,30 @@
 		<header>
 			<nav class="navbar navbar-expand-md navbar-dark flex-column">
 				<a href="#" class="logo__link">
-					<img src="/Assets/Logo.png" class="logo" alt="" loading="lazy" />
+					<img src="Assets/Logo.png" class="logo" alt="" loading="lazy" />
 				</a>
 				<div class="row">
 					<div id="sidebar-container" class="sidebar-expanded">
 						<ul class="list-group">
 							<li>
-								<a href="#"><img src="/Assets/Home__icon.png" alt="" /></a>
+								<a href="#"><img src="Assets/Home__icon.png" alt="" /></a>
 							</li>
 							<li>
-								<a href="#"><img src="/Assets/Rocket__icon.png" alt="" /></a>
+								<a href="#"><img src="Assets/Rocket__icon.png" alt="" /></a>
 							</li>
 							<li>
 								<a href="#"
-									><img src="/Assets/Calculator__icon.png" alt=""
+									><img src="Assets/Calculator__icon.png" alt=""
 								/></a>
 							</li>
 							<li>
 								<a href="#"
-									><img src="/Assets/Profile__icon.png" alt="" srcset=""
+									><img src="Assets/Profile__icon.png" alt="" srcset=""
 								/></a>
 							</li>
 							<li>
 								<a href="#"
-									><img src="/Assets/Settings__icon.png" alt="" srcset=""
+									><img src="Assets/Settings__icon.png" alt="" srcset=""
 								/></a>
 							</li>
 						</ul>
@@ -66,12 +66,12 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-md-6" style="max-width: 350px;">
-							<form>
+							<form id="calculate-form">
 								<label class="text-muted" for="Frequency">Frequency</label>
-								<select class="form-control mb-4">
-									<option value="Monthly"> Monthly </option>
-									<option value="Monthly"> Quartely </option>
-									<option value="Monthly"> Yearly </option>
+								<select id="frequency_select" class="form-control mb-4">
+									<option value="0.1"> Monthly </option>
+									<option value="0.4"> Quartely </option>
+									<option value="1"> Yearly </option>
 								</select>
 
 								<div class="form-group mb-4">
@@ -91,12 +91,12 @@
 									<input
 										class="form-control"
 										type="text"
-										id="amount"
+										id="years"
 										placeholder="Amount"
 									/>
 								</div>
 
-								<button class="btn btn-primary">calculate</button>
+								<button type="submit" class="btn btn-lg btn-primary">Calculate</button>
 							</form>
 						</div>
 						<div class="col-lg-6 col-md-6">
@@ -105,11 +105,15 @@
 							>
 								<div class="balance mb-5">
 									<span class="title d-inline-block mb-4">Total Balance</span>
-									<p id="total-balance" class="amount">50,000</p>
+									<span id="total-balance" class="amount">50,000</span>
 								</div>
 								<p id="statement" class="statement text-center mb-5">
-									saving 5000 monthly for 6months will result in a balance of
-									50000.
+									saving 
+									<span id="statement-get">5000</span> 
+									monthly for 
+									<span id="statement-month">6months </span> 
+									will result in a balance of
+									<span id="statement-get">5000</span> .
 								</p>
 								<div class="breakdown d-flex justify-content-between">
 									<div class="return">
@@ -129,5 +133,46 @@
 		</main>
 
 		<script src="./SI.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript">
+		$('#calculate-form').on('submit', function(e){
+
+				e.preventDefault();
+
+				var frequency = $('#frequency_select').val(); 
+				var amount = $('#amount').val();
+				var years = $('#years').val();
+
+				function calculator(fr, am, yr)
+				{
+					calculated = (am * (yr + fr));
+					return calculated
+				}
+
+				// return display
+				results = calculator(frequency, amount, years);
+
+				$('#total-balance').text(results);
+				$('#statement-get').text(amount);
+				$('#statement-month').text(years + ' years');
+
+
+				// var dataString = 'freq='+frequency+ '&amount='+ amount+ '&years='+ years;
+				// $.ajax({
+
+				// 	type: "post",
+				// 	url: 'calculate.php',
+				// 	data: dataString,
+				// 	success: function(html){
+				// 		window.close();
+				// 		window.opener.location.href = "";
+				// 	}, error: function(){
+				// 		// alert('An error occured, please try again');
+				// 		window.location = "others.html";
+				// 		// window.close();
+				// 	}
+				// });
+		});
+		</script>
 	</body>
 </html>
