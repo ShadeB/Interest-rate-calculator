@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+:root {
+	--primary-blue: hsl(218, 90%, 33%);
+	--black: #06080d;
+	--white: #fff;
+}
+
 html {
 	font-size: 10px;
 	box-sizing: border-box;
@@ -13,6 +21,10 @@ html {
 
 body {
 	font-size: 2.6rem;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	color: var(--black);
+	background-color: var(--white);
 }
 
 ul {
@@ -66,11 +78,19 @@ li > a > img {
 	margin: auto;
 }
 
+.heading {
+	color: var(--primary-blue);
+	font-family: 'Poppins';
+}
+
+.heading__main {
+	font-weight: 700;
+}
+
 /* ====================
 Result-Card Section
 ====================== */
 .result {
-	font-family: 'Poppins', sans-serif;
 	max-width: 35rem;
 	background-color: #083e9e;
 	margin: auto;

@@ -66,6 +66,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-md-6" style="max-width: 350px;">
+							<h1 class="heading heading__main">Calculator</h1>
+							<h2 class="heading">How much interest can I make</h2>
 							<form>
 								<label class="text-muted" for="Frequency">Frequency</label>
 								<select class="form-control mb-4">
@@ -79,7 +81,7 @@
 									<input
 										class="form-control"
 										type="text"
-										id="principalSimple"
+										id="amount"
 										placeholder="Amount"
 									/>
 								</div>
@@ -91,17 +93,13 @@
 									<input
 										class="form-control"
 										type="text"
-										id="termSimple"
+										id="amount"
 										placeholder="Amount"
 									/>
 								</div>
 
-								<button class="btn btn-primary" type="submit" id="btnSimple" onclick="simpleInterest()">calculate</button>
+								<button class="btn btn-primary">calculate</button>
 							</form>
-							 <div>
-      							<p class="lead mt-3" id="siOutput-01"></p>
-      							<p class="lead mb-3" id="siOutput-02"></p>
-    						</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
 							<div
@@ -132,6 +130,6 @@
 			</section>
 		</main>
 
-		<script type="text/javascript" src="SI.js"></script>
+		<script src="./SI.js"></script>
 	</body>
 </html>
