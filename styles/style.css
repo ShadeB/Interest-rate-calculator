@@ -31,6 +31,11 @@ ul {
 	list-style-type: none;
 }
 
+button {
+	outline: none;
+	border: none;
+}
+
 header {
 	background-color: #083e9e;
 	border-radius: 0px 70px 70px 0px;
@@ -53,7 +58,7 @@ li {
 }
 
 li {
-	padding: 2rem 4rem;
+	padding: 0.5rem 4rem;
 }
 
 li > a > img {
@@ -87,6 +92,25 @@ li > a > img {
 	font-weight: 700;
 }
 
+.form-control {
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.btn {
+	padding: 1.5rem 0;
+	width: 100%;
+	border-radius: 1.5rem;
+	background-color: var(--primary-blue);
+	color: var(--white);
+	font-size: 2rem;
+}
+
+.btn-primary {
+	outline: none;
+	border: 0;
+}
+
 /* ====================
 Result-Card Section
 ====================== */
@@ -99,21 +123,20 @@ Result-Card Section
 }
 
 .balance .title {
-	font-size: 3.6rem;
+	font-size: 2.6rem;
 	line-height: 5.4rem;
 	font-weight: 600;
 }
 
 .balance .amount {
-	font-size: 6.4rem;
+	font-size: 4rem;
 	font-weight: 800;
 	line-height: 9.6rem;
 }
 
 .result .statement {
-	font-size: 2.4rem;
-	line-height: 3.6rem;
-	width: 80%;
+	font-size: 2rem;
+	width: 95%;
 }
 
 .result .breakdown {
@@ -122,13 +145,32 @@ Result-Card Section
 
 .return .title,
 .savings .title {
-	line-height: 4.5rem;
-	font-size: 3rem;
-	font-weight: 500;
+	font-size: 2rem;
+	font-weight: 600;
 }
 
 .return .amount,
 .savings .amount {
 	font-weight: 600;
-	font-size: 3rem;
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 425px) {
+	header {
+		display: block;
+	}
+
+	section {
+		margin-left: 11rem;
+	}
+
+	.list-group {
+		margin-top: 2rem;
+	}
+}
+
+@media screen and (min-width: 720px) {
+	section {
+		padding: 2rem;
+	}
 }

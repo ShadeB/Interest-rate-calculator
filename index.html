@@ -67,9 +67,9 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6" style="max-width: 350px;">
 
-							<form id="calculate-form">
 							<h1 class="heading heading__main">Calculator</h1>
 							<h2 class="heading">How much interest can I make</h2>
+
 							<form id="calculate-form">
 
 								<label class="text-muted" for="Frequency">Frequency</label>
@@ -80,21 +80,21 @@
 								</select>
 
 								<div class="form-group mb-4">
-									<label class="text-muted" for="amount">Monthly Amount</label>
+									<label for="amount">Amount</label>
 									<input
 										class="form-control"
-										type="text"
-										id="amount"
+										type="number"
+										id="principalSimple"
 										placeholder="Amount"
+										required
 									/>
 								</div>
 
 								<div class="form-group mb-4">
-									<label class="text-muted" for="duration"
-										>Saving Duration (in years)</label
-									>
+									<label for="duration">Saving Duration (in years)</label>
 									<input
 										class="form-control"
+
 										type="text"
 										id="years"
 										placeholder="Amount"
@@ -102,13 +102,24 @@
 								</div>
 
 								<button type="submit" class="btn btn-lg btn-primary">Calculate</button>
+
+										type="number"
+										id="termSimple"
+										placeholder="Number Of years"
+										required
+									/>
+								</div>
 							</form>
+							<div>
+								<p class="lead mt-3" id="siOutput-01"></p>
+								<p class="lead mb-3" id="siOutput-02"></p>
+							</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
 							<div
 								class="result text-white text-center d-flex flex-column align-items-center shadow-lg"
 							>
-								<div class="balance mb-5">
+								<div class="balance">
 									<span class="title d-inline-block mb-4">Total Balance</span>
 									<span id="total-balance" class="amount"></span>
 								</div>
