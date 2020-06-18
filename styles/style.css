@@ -14,3 +14,53 @@ html {
 body {
 	font-size: 2.6rem;
 }
+
+
+
+/* ====================
+Result-Card Section
+====================== */
+.result {
+	font-family: 'Poppins', sans-serif;
+	max-width: 700px;
+	max-height: 530px;
+	background-color:#083E9E;
+	border-radius: 30px;
+	padding: 3%;
+}
+
+.balance .title {
+	font-size: 3.6rem;
+	line-height: 5.4rem;
+	font-weight: 600;
+}
+
+.balance .amount {
+	font-size: 6.4rem;
+	font-weight: 800;
+	line-height: 9.6rem;
+}
+
+.result .statement {
+	font-size: 2.4rem;
+	line-height: 3.6rem;
+	width:80%;
+}
+
+.result .breakdown {
+	width: 85%;
+}
+
+.return .title,
+.savings .title {
+	line-height: 4.5rem;
+	font-size: 3.0rem;
+	font-weight: 500;
+}
+
+.return .amount,
+.savings .amount {
+	font-weight: 600;
+	font-size: 3.0rem;
+}
+
