@@ -18,30 +18,118 @@
 		<!-- Custom CSS -->
 		<link rel="stylesheet" href="/src/styles/style.css" />
 		<!-- Font -->
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
+		<header>
+			<nav class="navbar navbar-expand-md navbar-dark flex-column">
+				<a href="#" class="logo__link">
+					<img src="/src/Assets/Logo.png" class="logo" alt="" loading="lazy" />
+				</a>
+				<div class="row">
+					<div id="sidebar-container" class="sidebar-expanded">
+						<ul class="list-group">
+							<li>
+								<a href="#"><img src="/src/Assets/Home__icon.png" alt="" /></a>
+							</li>
+							<li>
+								<a href="#"
+									><img src="/src/Assets/Rocket__icon.png" alt=""
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img src="/src/Assets/Calculator__icon.png" alt=""
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img src="/src/Assets/Profile__icon.png" alt="" srcset=""
+								/></a>
+							</li>
+							<li>
+								<a href="#"
+									><img src="/src/Assets/Settings__icon.png" alt="" srcset=""
+								/></a>
+							</li>
+						</ul>
+
+						<a href="#" class="logout">Log out</a>
+					</div>
+				</div>
+			</nav>
+		</header>
 		<main>
 			<!--RESULT CARD-->
-			<section class="result text-white text-center d-flex flex-column align-items-center shadow-lg">
-				<div class="balance mb-5">
-					<span class="title d-inline-block mb-4">Total Balance</span>
-					<p id="total-balance" class="amount">50,000</p>
-				</div>
-				<p id="statement" class="statement text-center mb-5">
-					saving 5000 monthly for 6months will result in a balance of 50000.
-				</p>
-				<div class="breakdown d-flex justify-content-between">
-					<div class="return">
-						<span class="title d-inline-block">Total Returns</span>
-						<p id="total-returns" class="amount">&#8358;20,000</p>
-					</div>
-					<div class="savings">
-						<span class="title d-inline-block">Total Savings</span>
-						<p id="total-savings" class="amount">&#8358;30,000</p>
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6" style="max-width: 350px;">
+							<form>
+								<label class="text-muted" for="Frequency">Frequency</label>
+								<select class="form-control mb-4">
+									<option value="Monthly"> Monthly </option>
+									<option value="Monthly"> Quartely </option>
+									<option value="Monthly"> Yearly </option>
+								</select>
+
+								<div class="form-group mb-4">
+									<label class="text-muted" for="amount">Monthly Amount</label>
+									<input
+										class="form-control"
+										type="text"
+										id="amount"
+										placeholder="Amount"
+									/>
+								</div>
+
+								<div class="form-group mb-4">
+									<label class="text-muted" for="duration"
+										>Saving Duration (in years)</label
+									>
+									<input
+										class="form-control"
+										type="text"
+										id="amount"
+										placeholder="Amount"
+									/>
+								</div>
+
+								<button class="btn btn-primary">calculate</button>
+							</form>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div
+								class="result text-white text-center d-flex flex-column align-items-center shadow-lg"
+							>
+								<div class="balance mb-5">
+									<span class="title d-inline-block mb-4">Total Balance</span>
+									<p id="total-balance" class="amount">50,000</p>
+								</div>
+								<p id="statement" class="statement text-center mb-5">
+									saving 5000 monthly for 6months will result in a balance of
+									50000.
+								</p>
+								<div class="breakdown d-flex justify-content-between">
+									<div class="return">
+										<span class="title d-inline-block">Total Returns</span>
+										<p id="total-returns" class="amount">&#8358;20,000</p>
+									</div>
+									<div class="savings">
+										<span class="title d-inline-block">Total Savings</span>
+										<p id="total-savings" class="amount">&#8358;30,000</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
+
+		<script src="./SI.js"></script>
 	</body>
 </html>
