@@ -6,15 +6,24 @@ var amount = 0;
 
 function simpleInterest() {
   event.preventDefault();
-  var principal = parseFloat(document.getElementById("principalSimple").value);
+  
+  var principal = parseFloat(document.getElementById("amount").value);
+  
   //var interestRate = parseFloat(document.getElementById("interestSimple").value);
  // interestRate = interestRate / 100;
-  var termOfLoan = parseFloat(document.getElementById("termSimple").value);
+  var termOfLoan = parseFloat(document.getElementById("years").value);
+  
   var simpleInt = principal * interestRate * termOfLoan;
   var amount = (principal + simpleInt).toFixed(2);
-  document.getElementById("siOutput-01").innerHTML = "Interest: $" + simpleInt.toFixed(2);
-  document.getElementById("siOutput-02").innerHTML = "Total + interest: $" + amount;
+  // document.getElementById("siOutput-01").innerHTML = "Interest: $" + simpleInt.toFixed(2);
+  
+  document.getElementById("total-balance").innerHTML =  amount;
+  document.getElementById("statement-month").innerHTML =  termOfLoan + " years";
+  document.getElementById("statement-get").innerHTML =  principal;
+  
+  
 }
+
 
 function compoundInterest() {
   event.preventDefault();
