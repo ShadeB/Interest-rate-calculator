@@ -68,18 +68,13 @@
 						<div class="col-lg-6 col-md-6" style="max-width: 350px;">
 							<form>
 								<label class="text-muted" for="Frequency">Frequency</label>
-								<select class="form-control mb-4">
-									<option value="Monthly"> Monthly </option>
-									<option value="Monthly"> Quartely </option>
-									<option value="Monthly"> Yearly </option>
-								</select>
 
 								<div class="form-group mb-4">
-									<label class="text-muted" for="amount">Monthly Amount</label>
+									<label class="text-muted" for="amount">Amount</label>
 									<input
 										class="form-control"
 										type="text"
-										id="amount"
+										id="principalSimple"
 										placeholder="Amount"
 									/>
 								</div>
@@ -91,13 +86,17 @@
 									<input
 										class="form-control"
 										type="text"
-										id="amount"
-										placeholder="Amount"
+										id="termSimple"
+										placeholder="Number Of years"
 									/>
 								</div>
 
-								<button class="btn btn-primary">calculate</button>
+								<button class="btn btn-primary" type="submit" id="btnSimple" onclick="simpleInterest()">calculate</button>
 							</form>
+							 <div>
+      							<p class="lead mt-3" id="siOutput-01"></p>
+      							<p class="lead mb-3" id="siOutput-02"></p>
+    						</div>
 						</div>
 						<div class="col-lg-6 col-md-6">
 							<div
@@ -128,6 +127,6 @@
 			</section>
 		</main>
 
-		<script src="./SI.js"></script>
+		<script type="text/javascript" src="index.js"></script>
 	</body>
 </html>
